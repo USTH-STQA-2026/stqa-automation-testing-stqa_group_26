@@ -17,16 +17,16 @@ Sử dụng **Playwright + Python** để kiểm thử hệ thống Mượn sác
 
 |              | Thông tin                    |
 | ------------ | ---------------------------- |
-| **Tên nhóm** | `<!-- VD: Nhóm 1 -->`        |
-| **Lớp**      | `<!-- VD: SE001.P11 -->`     |
-| **Học kỳ**   | `<!-- VD: HK2 2025-2026 -->` |
+| **Tên nhóm** | Group 26                     |
+| **Lớp**      | ICT2.012                     |
+| **Học kỳ**   | 2025 - 2026                  |
 
-| #   | MSSV | Họ và tên | Vai trò     |
-| --- | ---- | --------- | ----------- |
-| 1   |      |           | Nhóm trưởng |
-| 2   |      |           | Thành viên  |
-| 3   |      |           | Thành viên  |
-| 4   |      |           | Thành viên  |
+| # | MSSV     | Họ và tên                     | Vai trò     |
+|---|----------|-------------------------------|-------------|
+| 1 | 23BI14374| Nguyễn Huy <br> Quang         | Nhóm trưởng |
+| 2 | 2410232  | Nguyễn Tiến <br> Dũng         | Thành viên  |
+| 3 | 23BI14020| Nguyễn Phan <br> Hồng Anh     | Thành viên  |
+| 4 | 23BI14017| Đặng Quang <br> Nam Anh       | Thành viên  |
 
 ---
 
