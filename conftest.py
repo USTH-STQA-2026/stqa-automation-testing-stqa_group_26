@@ -123,21 +123,39 @@ def enable_flutter_semantics(page, timeout=15000):
         timeout=timeout,
     )
 
-
-def flutter_fill(page, label, value):
+def flutter_fill(page, labels, value):
     """Nhập text vào Flutter text field thông qua semantics input."""
-    field = page.locator(f'input[aria-label="{label}"]').first
-    field.wait_for(state="attached", timeout=10000)
+
+    if isinstance(labels, str):
+        labels = [labels]
+
+    field = None
+
+    for label in labels:
+        locator = page.locator(
+            f'input[aria-label="{label}"]'
+        ).first
+
+        try:
+            locator.wait_for(state="attached", timeout=2000)
+            field = locator
+            break
+        except:
+            pass
+
+    assert field is not None, f"Không tìm thấy input với labels: {labels}"
+
     field.click()
 
-    # Flutter tạo input ẩn khi editing — chờ nó xuất hiện thay vì sleep
-    active_input = page.locator("flt-text-editing-host input, flt-text-editing-host textarea")
+    active_input = page.locator(
+        "flt-text-editing-host input, flt-text-editing-host textarea"
+    )
+
     try:
         active_input.first.wait_for(state="attached", timeout=3000)
         active_input.first.fill(value)
     except Exception:
         field.fill(value)
-
 
 def flutter_click_button(page, text):
     """Click Flutter button thông qua semantics element."""
