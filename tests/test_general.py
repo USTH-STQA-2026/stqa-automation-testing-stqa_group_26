@@ -1,20 +1,3 @@
-"""
-Logout & Language Tests (*Kiểm thử Đăng xuất & Chuyển ngôn ngữ*) — Library Book Borrowing System (*Hệ thống Mượn sách thư viện*)
-
-Students must complete ALL 2 test cases in this file.
-(*Sinh viên cần hoàn thành TẤT CẢ 2 test case trong file này.*)
-
-Hints (*Gợi ý*):
-    - Use login() helper to log in (*Dùng login() helper để đăng nhập*)
-    - Logout button: 'flt-semantics[role="button"]:has-text("Đăng xuất")'
-      (*Nút Đăng xuất*)
-    - Language switch EN button: 'flt-semantics[role="button"]:has-text("EN")'
-      (*Nút chuyển ngôn ngữ EN*)
-    - After logout: page returns to login (has "Đăng nhập" button and "Email" input)
-      (*Sau đăng xuất: trang quay về login*)
-    - After switching to EN: text "Logout", "Borrow", "Search", "Library" may appear
-      (*Sau chuyển EN: text tiếng Anh có thể xuất hiện*)
-"""
 import os
 import time
 import pytest
