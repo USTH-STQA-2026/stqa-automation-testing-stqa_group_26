@@ -9,9 +9,10 @@ from conftest import (
 
 def test_logout(page, test_config):
     """TC-14: Logout success (*Đăng xuất thành công*)
-
+    ✅ COMPLETED
+    (*ĐÃ HOÀN THÀNH*)
     """
-    # [R] Reachability
+    # [R] Reachability: Login
     login(page, test_config)
     enable_flutter_semantics(page)
 
@@ -28,7 +29,7 @@ def test_logout(page, test_config):
     enable_flutter_semantics(page)
     page.screenshot(path=os.path.join(SCREENSHOT_DIR, "test_logout.png"))
 
-    # [R✓] Revealability
+    # [R✓] Revealability: Kiểm tra kết quả — Test Oracle phát hiện lỗi nếu có
     sem_text = " ".join(page.locator("flt-semantics").all_text_contents())
 
     has_login_button = (
@@ -58,9 +59,10 @@ def test_logout(page, test_config):
 
 def test_switch_language_to_english(page, test_config):
     """TC-15: Switch language to English (*Chuyển ngôn ngữ sang tiếng Anh*)
-
+    ✅ COMPLETED
+    (*ĐÃ HOÀN THÀNH*)
     """
-    # [R] Reachability
+    # [R] Reachability: Login
     login(page, test_config)
     enable_flutter_semantics(page)
 
@@ -78,7 +80,7 @@ def test_switch_language_to_english(page, test_config):
     enable_flutter_semantics(page)
     page.screenshot(path=os.path.join(SCREENSHOT_DIR, "test_switch_language_to_english.png"))
 
-    # [R✓] Revealability
+    # [R✓] Revealability: Kiểm tra kết quả — Test Oracle phát hiện lỗi nếu có
     sem_text = " ".join(page.locator("flt-semantics").all_text_contents())
 
     has_english_logout = "Sign out" in sem_text
