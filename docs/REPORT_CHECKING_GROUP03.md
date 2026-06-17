@@ -43,6 +43,7 @@
 | 5 |  Mỗi test có screenshot tự động (lưu vào screenshots/) | 2 | 1 |
 | 6 |  Điền thông tin nhóm trong README.md (Bảng Team Information) | 1 | 1 | 
 | 7 |  Nộp bài qua Pull Request hoặc link repo | 1 | 1 |
+|   |   | Total | 9 |
 
 ### 2.2, Bonus
 
@@ -52,6 +53,7 @@
 | 2 |  Viết data-driven test (parametrize nhiều bộ dữ liệu cho 1 kịch bản) | 0 | 0 |
 | 3 |  Thêm assertion chi tiết (kiểm tra text cụ thể, không chỉ kiểm tra URL) | 0.5 | 0.5 |
 | 4 |  Viết mô tả ngắn cho mỗi test trong REPORT.md | 0.5 | 0.5 |
+|   |   | Total bonus | 3 |
 
 ### Tổng điểm cho Automation Testing: 12
 
