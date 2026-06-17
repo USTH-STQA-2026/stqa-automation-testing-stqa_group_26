@@ -12,17 +12,14 @@ def test_search_book_by_name(page, test_config):
     ✅ COMPLETED
     (*ĐÃ HOÀN THÀNH*)
     """
-    # [R] Reachability: login trước để vào trang chính (nên dùng helper thay vì code lại logic đăng nhập tránh code dài)
+    # [R] Reachability: login trước để vào trang chính
     login(page, test_config)
     enable_flutter_semantics(page)
 
-    # [I] Infection: nhập keyword tìm kiếm
-    flutter_fill (
+    # [I] Infection: nhập keyword tìm kiếm (Sửa từ List thành String để tránh lỗi CI)
+    flutter_fill(
         page,
-        [
-            "Tìm kiếm theo tên sách hoặc tác giả...",
-            "Search by book title or author..."
-        ],
+        "Tìm kiếm theo tên sách hoặc tác giả...",
         "Flutter"
     )
 
@@ -36,22 +33,20 @@ def test_search_book_by_name(page, test_config):
     assert page.locator('flt-semantics[aria-label*="Flutter"]').count() > 0, \
     "Không tìm thấy sách có chứa từ khóa Flutter"
 
+
 def test_search_book_no_result(page, test_config):
     """TC-08: Search book – no results (*Tìm kiếm sách — không có kết quả*)
     ✅ COMPLETED
     (*ĐÃ HOÀN THÀNH*)
     """
-    # [R] Reachability: login trước để vào trang chính (nên dùng helper thay vì code lại logic đăng nhập tránh code dài)
+    # [R] Reachability: login trước để vào trang chính
     login(page, test_config)
     enable_flutter_semantics(page)
 
-    # [I] Infection: nhập keyword tìm kiếm
-    flutter_fill (
+    # [I] Infection: nhập keyword tìm kiếm (Sửa từ List thành String để phòng tránh lỗi CI)
+    flutter_fill(
         page,
-        [
-            "Tìm kiếm theo tên sách hoặc tác giả...",
-            "Search by book title or author..."
-        ],
+        "Tìm kiếm theo tên sách hoặc tác giả...",
         "xyz_khong_ton_tai_12345"
     )
 
@@ -62,8 +57,9 @@ def test_search_book_no_result(page, test_config):
     # [R✓] Revealability: kiểm tra có kết quả Flutter
     sem_text = " ".join(page.locator("flt-semantics").all_text_contents())
     
+    # Sửa lại câu thông báo lỗi cho đúng logic với assert == 0
     assert page.locator('flt-semantics[aria-label*="Mã: BOOK"]').count() == 0, \
-    "Không tìm thấy sách có chứa từ khóa Flutter"
+    "Lỗi: Hệ thống vẫn hiển thị sách dù từ khóa tìm kiếm không tồn tại!"
 
 
 def test_filter_by_category(page, test_config):
@@ -71,7 +67,7 @@ def test_filter_by_category(page, test_config):
     ✅ COMPLETED
     (*ĐÃ HOÀN THÀNH*)
     """
-    # [R] Reachability: login trước để vào trang chính (nên dùng helper thay vì code lại logic đăng nhập tránh code dài)
+    # [R] Reachability: login trước để vào trang chính
     login(page, test_config)
     enable_flutter_semantics(page)
 
@@ -92,7 +88,6 @@ def test_filter_by_category(page, test_config):
 
     for i in range(book_count):
         aria_label = book_cards.nth(i).get_attribute("aria-label") or ""
-
         assert category.lower() in aria_label.lower(), f"Sách thứ {i + 1} không thuộc thể loại {category}. Nội dung: {aria_label}"
 
 
@@ -101,18 +96,15 @@ def test_search_by_author(page, test_config):
     ✅ COMPLETED
     (*ĐÃ HOÀN THÀNH*)
     """
-    # [R] Reachability: login trước để vào trang chính (nên dùng helper thay vì code lại logic đăng nhập tránh code dài)
+    # [R] Reachability: login trước để vào trang chính
     login(page, test_config)
     enable_flutter_semantics(page)
 
-    # [I] Infection: nhập keyword tìm kiếm
+    # [I] Infection: nhập keyword tìm kiếm (Sửa từ List thành String để tránh lỗi CI)
     author = "Nguyễn Minh Đức"
-    flutter_fill (
+    flutter_fill(
         page,
-        [
-            "Tìm kiếm theo tên sách hoặc tác giả...",
-            "Search by book title or author..."
-        ],
+        "Tìm kiếm theo tên sách hoặc tác giả...",
         author
     )
 
@@ -123,4 +115,5 @@ def test_search_by_author(page, test_config):
     # [R✓] Revealability: kiểm tra có kết quả Flutter
     sem_text = " ".join(page.locator("flt-semantics").all_text_contents())
 
-    assert page.locator('flt-semantics[aria-label*="Nguyễn Minh Đức"]').count() > 0, "Không tìm thấy sách có tên tác giả"
+    assert page.locator('flt-semantics[aria-label*="Nguyễn Minh Đức"]').count() > 0, \
+    "Không tìm thấy sách có tên tác giả Nguyễn Minh Đức"
