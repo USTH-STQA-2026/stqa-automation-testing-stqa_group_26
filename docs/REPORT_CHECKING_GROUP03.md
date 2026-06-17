@@ -15,6 +15,7 @@
 | 7 |  Điền thông tin nhóm trong README.md (Bảng Team Information) | 1 | 1 |
 | 8 |  Thực thi tất cả TC trên hệ thống (ghi nhận Pass/Fail + actual result)  | 1 | 1 |
 | 9 |  Nộp bài qua link repo hoặc Pull Request | 1 | 1 |
+|   |   | Total | 9 |
 
 ### 1.2, Bonus
 
@@ -24,10 +25,11 @@
 | 2 |  Thêm bảng Decision Table hoàn chỉnh cho chức năng Mượn sách | 0.5 | 0.5 |
 | 3 |  Mỗi bug report có ảnh chụp minh chứng | 0.5 | 0.5 |
 | 4 |  Tổng hợp có đề xuất ưu tiên sửa lỗi (High trước, Low sau) | 0.5 | 0.5 |
+|   |   | Total bonus| 4 |
 
 - Không có evidence cho test-execution : - 0.5
 
-### Tổng điểm cho Manual Testing: 10
+### Tổng điểm cho Manual Testing: 12.5
 
 ## 2. Automation Testing:
 ### 2.1, Requirements:
@@ -51,7 +53,7 @@
 | 3 |  Thêm assertion chi tiết (kiểm tra text cụ thể, không chỉ kiểm tra URL) | 0.5 | 0.5 |
 | 4 |  Viết mô tả ngắn cho mỗi test trong REPORT.md | 0.5 | 0.5 |
 
-### Tổng điểm cho Automation Testing: 11
+### Tổng điểm cho Automation Testing: 12
 
 ## 3. Nhận xét chung:
 
@@ -61,8 +63,8 @@
 
 ## 4. Kết quả cuối cùng:
 
-### Manual Testing : 11.5
-### Automation Testing : 10.5
+### Manual Testing : 12.5
+### Automation Testing : 12
 
 
 
