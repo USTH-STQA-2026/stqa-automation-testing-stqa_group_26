@@ -3,6 +3,7 @@
 **System:** Library Book Borrowing Management ABC (https://stqa.rbc.vn)
 **Subject:** Software Testing and Quality Assurance (STQA)
 **Execution Team:** Group 26 (Class: 252ICT2012.L1)
+**GitHub Link:** https://github.com/USTH-STQA-2026/stqa-automation-testing-stqa_group_26
 
 ---
 
